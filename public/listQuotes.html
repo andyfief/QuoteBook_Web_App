@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes - QuoteBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="page-title">Quotes</h1>
+        <div id="welcome-message" style="display: none;"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li id="login-logout"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="quotes-display">
+            <ul id="quotes-list"></ul>
+            <button id="add-quote-button">Add Quote</button>
+        </section>
+    </main>
+    <footer>
+        <p>QuoteBook for CS290, Andrew Fief. 6/11/2024</p>
+    </footer>
+
+    <div id="popup-form" style="display: none;">
+        <form id="quote-form">
+            <label for="quote">Quote:</label>
+            <input type="text" id="quote" name="quote">
+            <label for="author">Author:</label>
+            <input type="text" id="author" name="author">
+            <button type="submit">Submit</button>
+            <button type="button" id="cancel-button">Cancel</button>
+            <div id="error-message" style="display: none; color: red;">Please fill in both fields.</div>
+        </form>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const category = urlParams.get('category');
+            displayQuotesForCategory(category);
+        });
+    </script>
+</body>
+</html>

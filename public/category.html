@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotes of "Category" - QuoteBook</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Quotes of "Category"</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quotes.html">Quotes</a></li>
+                <li class="login"><a href="login.html">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="quote-section">
+            <h2>Quotes of "Category"</h2>
+            <ul id="quote-list">
+            </ul>
+        </section>
+        <section id="add-quote-section">
+            <h2>Post a Quote</h2>
+            <button id="add-quote-button">Add Quote</button>
+        </section>
+    </main>
+
+    <div id="post-quote-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Post a Quote</h2>
+            <form id="post-quote-form">
+                <div>
+                    <label for="author">Author:</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div>
+                    <label for="quote">Quote:</label>
+                    <textarea id="quote" name="quote" rows="4" required></textarea>
+                </div>
+                <button type="button" class="cancel">Cancel</button>
+                <button type="submit" class="create-post">Create Post</button>
+            </form>
+        </div>
+    </div>
+    
+    <footer>
+        <p>QuoteBook for CS290, Andrew Fief. 6/11/2024 </p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
